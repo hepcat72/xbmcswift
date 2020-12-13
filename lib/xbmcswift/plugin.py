@@ -35,7 +35,7 @@ class Plugin(object):
         if self._mode in debug_modes:
             self._plugin._setup(os.path.dirname(self._filepath))
 
-        self._argv0, self._argv1, self._argv2 = args
+        self._argv0, self._argv1, self._argv2, resume = args
         self.handle = int(self._argv1)
 
         self.qs_args = parse_qs(self._argv2.lstrip('?'))
